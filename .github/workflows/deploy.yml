@@ -27,5 +27,5 @@ jobs:
             source venv/bin/activate
             pip install -r requirements.txt
             python manage.py migrate
-            systemctl restart clothes_crm.service
+            systemctl restart gunicorn.service
           EOF
