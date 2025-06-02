@@ -21,7 +21,7 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          ssh ubuntu@13.62.47.131 << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@13.62.47.131 << 'EOF'
             cd /clothes_crm/
             git pull origin main
             source venv/bin/activate
